@@ -43,7 +43,7 @@ void VaillantX6Component::setup() {
     }
     {
         auto cmd = new GetTemperatureCommand(6);
-        cmd->name = "Get Flow Temperature";
+        cmd->name = "Get Storage Temperature";
         cmd->sensor_name = "Vaillant X6 Storage Temperature";
         cmd->object_id = "vaillant_x6_storage_temperature";
         cmd->request_bytes = {0x07, 0x00, 0x00, 0x00, 0x17, 0x03, 0xcd};
