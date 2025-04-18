@@ -61,6 +61,8 @@ class RequestResponseHandler {
                 }
 
                 if (!is_response_valid()) {
+                    // Output the response 
+                    ESP_LOG_BUFFER_HEX(TAG, response_buffer, bytes_read_count);
                     ESP_LOGW(TAG, "Invalid response received");
                     is_waiting_for_response = false;
                     return false;
